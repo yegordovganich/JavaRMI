@@ -2,7 +2,6 @@ package counter;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -40,7 +39,7 @@ public class CounterClientGUI extends JFrame {
             try {
                 return supplier.get();
             } catch (RemoteException e) {
-                System.out.println("Excepption: " + e.getMessage());
+                System.out.println("Exception: " + e.getMessage());
                 return current;
             }
         };
